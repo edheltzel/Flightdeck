@@ -10,16 +10,15 @@
  */
 
 const addWorkflow = require("./src/_flightdeck/workflow");
-const addFilters = require("./src/_flightdeck/filters");
 const addTransforms = require("./src/_flightdeck/transforms");
 const addShortcodes = require("./src/_flightdeck/shortcodes");
 const addPlugins = require("./src/_flightdeck/plugins");
 
-module.exports = (config) => {
+module.exports = async (config) => {
 
 	/** @type {{useImageDirTransform: boolean}} */
 	const options = {
-							useImageDirTransform: false,
+		useImageDirTransform: false,
 	};
 
 	// Configure 11ty development server, layout aliases, watch, passthrough copy
@@ -35,6 +34,7 @@ module.exports = (config) => {
 	addShortcodes(config);
 
 	// Custom universal filters for Nunjucks/Liquid templates
+	const { default: addFilters } = await import("./src/_flightdeck/filters.mjs");
 	addFilters(config);
 
 	// 11ty configuration options

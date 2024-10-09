@@ -9,8 +9,8 @@
  * // outputs: https://example.com/about/
  */
 
-const baseUrl = require("../../_includes/data/site").baseUrl;
+import baseUrl from "../../_includes/data/site.mjs";
 
-module.exports = (url) => {
+export default (url) => {
   return `${baseUrl}${url}`;
 };
