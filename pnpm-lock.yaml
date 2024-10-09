@@ -11,12 +11,12 @@ importers:
       '@alpinejs/persist':
         specifier: ^3.14.1
         version: 3.14.1
+      '@types/luxon':
+        specifier: ^3.4.2
+        version: 3.4.2
       alpinejs:
         specifier: ^3.14.1
         version: 3.14.1
-      upgrade:
-        specifier: ^1.1.0
-        version: 1.1.0
     devDependencies:
       '@11ty/eleventy':
         specifier: ^3.0.0
@@ -54,6 +54,9 @@ importers:
       lightningcss-cli:
         specifier: ^1.27.0
         version: 1.27.0
+      luxon:
+        specifier: ^3.5.0
+        version: 3.5.0
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -450,6 +453,9 @@ packages:
   '@sindresorhus/transliterate@1.6.0':
     resolution: {integrity: sha512-doH1gimEu3A46VX6aVxpHTeHrytJAG6HgdxntYnCFiIFHEM/ZGpG8KiZGBChchjQmG0XFIBL552kBTjVcMZXwQ==}
     engines: {node: '>=12'}
+
+  '@types/luxon@3.4.2':
+    resolution: {integrity: sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==}
 
   '@vue/reactivity@3.1.5':
     resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
@@ -1506,9 +1512,6 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  upgrade@1.1.0:
-    resolution: {integrity: sha512-NtkVvqVCqsJo5U3mYRum2Tw6uCltOxfIJ/AfTZeTmw6U39IB5X23xF+kRZ9aiPaORqeiQQ7Q209/ibhOvxzwHA==}
-
   upper-case@1.1.3:
     resolution: {integrity: sha512-WRbjgmYzgXkCV7zNVpy5YgrHgbBv126rMALQQMrmzOVC4GM2waQ9x7xtm8VU+1yF2kWyPzI9zbZ48n4vSxwfSA==}
 
@@ -1914,6 +1917,8 @@ snapshots:
   '@sindresorhus/transliterate@1.6.0':
     dependencies:
       escape-string-regexp: 5.0.0
+
+  '@types/luxon@3.4.2': {}
 
   '@vue/reactivity@3.1.5':
     dependencies:
@@ -2914,8 +2919,6 @@ snapshots:
       browserslist: 4.24.0
       escalade: 3.2.0
       picocolors: 1.1.0
-
-  upgrade@1.1.0: {}
 
   upper-case@1.1.3: {}
 

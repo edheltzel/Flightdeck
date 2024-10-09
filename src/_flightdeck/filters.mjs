@@ -11,7 +11,7 @@
 import baseUrl from "./filters/baseUrl.mjs";
 import { postLimit } from "./filters/postLimit.js";
 import { stripFileExtension } from "./filters/stripFileExtension.js";
-import { postDate, postDateTime } from "./filters/dates.js";
+import { postDate, postDateTime } from "./filters/dates.mjs";
 import excerpt from "./filters/excerpt.js";
 
 export default (config) => {

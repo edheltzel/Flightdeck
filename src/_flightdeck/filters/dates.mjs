@@ -1,23 +1,21 @@
-const { DateTime } = require("luxon"); //bundled with 11ty
+import { DateTime } from "luxon"; // bundled with 11ty
 
 /**
  * Human readable date format for date
- * @param {string} postDate
+ * @param {Date} date
  * @returns {string} May 20, 1982
  * @example {{ page.date | postDate }}
  */
-const postDate = (date) => {
+export const postDate = (date) => {
   return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED);
 };
 
 /**
  * Human readable format for date with time
- * @param {string} postDateTime
+ * @param {Date} date
  * @returns {string} May 20, 1982, 5:30 PM EDT
  * @example {{ page.date | postDateTime }}
  */
-const postDateTime = (date) => {
+export const postDateTime = (date) => {
   return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_MED);
 };
-
-module.exports = { postDate, postDateTime };
