@@ -2,21 +2,21 @@
  * Accessibility & User interaction
  */
 [aria-controls] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 [aria-disabled="true"],
 [disabled] {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 [aria-hidden="false"][hidden] {
-  display: initial;
+	display: initial;
 }
 
 [aria-hidden="false"][hidden]:not(:focus) {
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
 }
 
 a,
@@ -28,9 +28,9 @@ select,
 summary,
 textarea,
 [tabindex] {
-  touch-action: manipulation;
+	touch-action: manipulation;
 }
 
 [dir="rtl"] {
-  direction: rtl;
+	direction: rtl;
 }

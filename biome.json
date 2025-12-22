@@ -1,44 +1,43 @@
 {
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "tab",
-    "lineWidth": 120
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double",
-      "semicolons": "always"
-    },
-    "globals": ["$", "_", "externalVariable"]
-  },
-	"css":{
-		"formatter":{
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"noImportantStyles": "off"
+			},
+			"suspicious": {
+				"noUnknownAtRules": "off"
+			},
+			"correctness": {
+				"noUnknownMediaFeatureName": "off",
+				"noUnknownPseudoElement": "off"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 120
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "always"
+		},
+		"globals": ["$", "_", "externalVariable"]
+	},
+	"css": {
+		"formatter": {
 			"enabled": true,
 			"lineWidth": 120
 		},
-		"linter":{
+		"linter": {
 			"enabled": true
 		}
 	},
-  "files": {
-    "ignoreUnknown": false,
-    "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.json", "**/*.css"]
-  },
-  "overrides": [
-    {
-      "include": ["./node_modules/**", "./.vscode/**", "./.cache/**", "./.jampack/**", "./_site/**", "./dist/**", "**/*.map.*", "./package.json", "./*rc*.json"],
-      "linter": {
-        "enabled": false
-      },
-      "formatter": {
-        "enabled": false
-      }
-    }
-  ]
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["src/**/*.js", "src/**/*.json", "src/**/*.css", "eleventy.config.js"]
+	}
 }

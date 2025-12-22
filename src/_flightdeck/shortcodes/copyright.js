@@ -4,5 +4,5 @@
  * @usage {% year %}
  */
 export default () => {
-  return `&copy; ${new Date().getFullYear()}`;
+	return `&copy; ${new Date().getFullYear()}`;
 };

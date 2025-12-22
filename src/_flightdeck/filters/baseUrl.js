@@ -12,5 +12,5 @@
 import { baseUrl } from "../../_includes/data/site.js";
 
 export default (url) => {
-  return `${baseUrl}${url}`;
+	return `${baseUrl}${url}`;
 };

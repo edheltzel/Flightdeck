@@ -2,17 +2,17 @@
  * Button
  */
 button {
-  margin: 0;
-  overflow: visible;
-  font-family: inherit;
-  text-transform: none;
+	margin: 0;
+	overflow: visible;
+	font-family: inherit;
+	text-transform: none;
 }
 
 button,
 [type="submit"],
 [type="reset"],
 [type="button"] {
-  appearance: button;
+	appearance: button;
 }
 
 button,
@@ -21,26 +21,30 @@ button,
 [type="button"],
 [type="file"]::file-selector-button,
 [role="button"] {
-  --autopilot-background-color: var(--autopilot-primary-background);
-  --autopilot-border-color: var(--autopilot-primary-border);
-  --autopilot-color: var(--autopilot-primary-inverse);
-  --autopilot-box-shadow: var(--autopilot-button-box-shadow, 0 0 0 rgb(0 0 0 / 0%));
+	--autopilot-background-color: var(--autopilot-primary-background);
+	--autopilot-border-color: var(--autopilot-primary-border);
+	--autopilot-color: var(--autopilot-primary-inverse);
+	--autopilot-box-shadow: var(--autopilot-button-box-shadow, 0 0 0 rgb(0 0 0 / 0%));
 
-  padding: var(--autopilot-form-element-spacing-vertical) var(--autopilot-form-element-spacing-horizontal);
-  border: var(--autopilot-border-width) solid var(--autopilot-border-color);
-  border-radius: var(--autopilot-border-radius);
-  outline: none;
-  background-color: var(--autopilot-background-color);
-  box-shadow: var(--autopilot-box-shadow);
-  color: var(--autopilot-color);
-  font-weight: var(--autopilot-font-weight);
-  font-size: 1rem;
-  line-height: var(--autopilot-line-height);
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color var(--autopilot-transition), border-color var(--autopilot-transition), color var(--autopilot-transition), box-shadow var(--autopilot-transition);
+	padding: var(--autopilot-form-element-spacing-vertical) var(--autopilot-form-element-spacing-horizontal);
+	border: var(--autopilot-border-width) solid var(--autopilot-border-color);
+	border-radius: var(--autopilot-border-radius);
+	outline: none;
+	background-color: var(--autopilot-background-color);
+	box-shadow: var(--autopilot-box-shadow);
+	color: var(--autopilot-color);
+	font-weight: var(--autopilot-font-weight);
+	font-size: 1rem;
+	line-height: var(--autopilot-line-height);
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+	transition:
+		background-color var(--autopilot-transition),
+		border-color var(--autopilot-transition),
+		color var(--autopilot-transition),
+		box-shadow var(--autopilot-transition);
 }
 
 button:is([aria-current]:not([aria-current="false"])),
@@ -55,10 +59,10 @@ button:is(:hover, :active, :focus),
 [type="file"]::file-selector-button:is(:hover, :active, :focus),
 [role="button"]:is([aria-current]:not([aria-current="false"])),
 [role="button"]:is(:hover, :active, :focus) {
-  --autopilot-background-color: var(--autopilot-primary-hover-background);
-  --autopilot-border-color: var(--autopilot-primary-hover-border);
-  --autopilot-box-shadow: var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%));
-  --autopilot-color: var(--autopilot-primary-inverse);
+	--autopilot-background-color: var(--autopilot-primary-hover-background);
+	--autopilot-border-color: var(--autopilot-primary-hover-border);
+	--autopilot-box-shadow: var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%));
+	--autopilot-color: var(--autopilot-primary-inverse);
 }
 
 button:focus,
@@ -73,177 +77,213 @@ button:is([aria-current]:not([aria-current="false"])):focus,
 [type="file"]::file-selector-button:is([aria-current]:not([aria-current="false"])):focus,
 [role="button"]:focus,
 [role="button"]:is([aria-current]:not([aria-current="false"])):focus {
-  --autopilot-box-shadow: var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%)), 0 0 0 var(--autopilot-outline-width) var(--autopilot-primary-focus);
+	--autopilot-box-shadow:
+		var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%)), 0 0 0 var(--autopilot-outline-width)
+		var(--autopilot-primary-focus);
 }
 
 [type="submit"],
 [type="reset"],
 [type="button"] {
-  margin-bottom: var(--autopilot-spacing);
+	margin-bottom: var(--autopilot-spacing);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).secondary,
 [type="reset"],
 [type="file"]::file-selector-button {
-  --autopilot-background-color: var(--autopilot-secondary-background);
-  --autopilot-border-color: var(--autopilot-secondary-border);
-  --autopilot-color: var(--autopilot-secondary-inverse);
+	--autopilot-background-color: var(--autopilot-secondary-background);
+	--autopilot-border-color: var(--autopilot-secondary-border);
+	--autopilot-color: var(--autopilot-secondary-inverse);
 
-  cursor: pointer;
+	cursor: pointer;
 }
 
-:is(button, [type="submit"], [type="button"], [role="button"]).secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
+:is(button, [type="submit"], [type="button"], [role="button"]).secondary:is(
+		[aria-current]:not([aria-current="false"]),
+		:hover,
+		:active,
+		:focus
+	),
 [type="reset"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
 [type="file"]::file-selector-button:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-background-color: var(--autopilot-secondary-hover-background);
-  --autopilot-border-color: var(--autopilot-secondary-hover-border);
-  --autopilot-color: var(--autopilot-secondary-inverse);
+	--autopilot-background-color: var(--autopilot-secondary-hover-background);
+	--autopilot-border-color: var(--autopilot-secondary-hover-border);
+	--autopilot-color: var(--autopilot-secondary-inverse);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).secondary:focus,
-:is(button, [type="submit"], [type="button"], [role="button"]).secondary:is([aria-current]:not([aria-current="false"])):focus,
+:is(button, [type="submit"], [type="button"], [role="button"]).secondary:is(
+		[aria-current]:not([aria-current="false"])
+	):focus,
 [type="reset"]:focus,
 [type="reset"]:is([aria-current]:not([aria-current="false"])):focus,
 [type="file"]::file-selector-button:focus,
 [type="file"]::file-selector-button:is([aria-current]:not([aria-current="false"])):focus {
-  --autopilot-box-shadow: var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%)), 0 0 0 var(--autopilot-outline-width) var(--autopilot-secondary-focus);
+	--autopilot-box-shadow:
+		var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%)), 0 0 0 var(--autopilot-outline-width)
+		var(--autopilot-secondary-focus);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).contrast {
-  --autopilot-background-color: var(--autopilot-contrast-background);
-  --autopilot-border-color: var(--autopilot-contrast-border);
-  --autopilot-color: var(--autopilot-contrast-inverse);
+	--autopilot-background-color: var(--autopilot-contrast-background);
+	--autopilot-border-color: var(--autopilot-contrast-border);
+	--autopilot-color: var(--autopilot-contrast-inverse);
 }
 
-:is(button, [type="submit"], [type="button"], [role="button"]).contrast:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-background-color: var(--autopilot-contrast-hover-background);
-  --autopilot-border-color: var(--autopilot-contrast-hover-border);
-  --autopilot-color: var(--autopilot-contrast-inverse);
+:is(button, [type="submit"], [type="button"], [role="button"]).contrast:is(
+		[aria-current]:not([aria-current="false"]),
+		:hover,
+		:active,
+		:focus
+	) {
+	--autopilot-background-color: var(--autopilot-contrast-hover-background);
+	--autopilot-border-color: var(--autopilot-contrast-hover-border);
+	--autopilot-color: var(--autopilot-contrast-inverse);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).contrast:focus,
-:is(button, [type="submit"], [type="button"], [role="button"]).contrast:is([aria-current]:not([aria-current="false"])):focus {
-  --autopilot-box-shadow: var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%)), 0 0 0 var(--autopilot-outline-width) var(--autopilot-contrast-focus);
+:is(button, [type="submit"], [type="button"], [role="button"]).contrast:is(
+		[aria-current]:not([aria-current="false"])
+	):focus {
+	--autopilot-box-shadow:
+		var(--autopilot-button-hover-box-shadow, 0 0 0 rgb(0 0 0 / 0%)), 0 0 0 var(--autopilot-outline-width)
+		var(--autopilot-contrast-focus);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).outline,
 [type="reset"].outline {
-  --autopilot-background-color: transparent;
-  --autopilot-color: var(--autopilot-primary);
-  --autopilot-border-color: var(--autopilot-primary);
+	--autopilot-background-color: transparent;
+	--autopilot-color: var(--autopilot-primary);
+	--autopilot-border-color: var(--autopilot-primary);
 }
 
-:is(button, [type="submit"], [type="button"], [role="button"]).outline:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
+:is(button, [type="submit"], [type="button"], [role="button"]).outline:is(
+		[aria-current]:not([aria-current="false"]),
+		:hover,
+		:active,
+		:focus
+	),
 [type="reset"].outline:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-background-color: transparent;
-  --autopilot-color: var(--autopilot-primary-hover);
-  --autopilot-border-color: var(--autopilot-primary-hover);
+	--autopilot-background-color: transparent;
+	--autopilot-color: var(--autopilot-primary-hover);
+	--autopilot-border-color: var(--autopilot-primary-hover);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary,
 [type="reset"].outline {
-  --autopilot-color: var(--autopilot-secondary);
-  --autopilot-border-color: var(--autopilot-secondary);
+	--autopilot-color: var(--autopilot-secondary);
+	--autopilot-border-color: var(--autopilot-secondary);
 }
 
-:is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
+:is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary:is(
+		[aria-current]:not([aria-current="false"]),
+		:hover,
+		:active,
+		:focus
+	),
 [type="reset"].outline:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-color: var(--autopilot-secondary-hover);
-  --autopilot-border-color: var(--autopilot-secondary-hover);
+	--autopilot-color: var(--autopilot-secondary-hover);
+	--autopilot-border-color: var(--autopilot-secondary-hover);
 }
 
 :is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast {
-  --autopilot-color: var(--autopilot-contrast);
-  --autopilot-border-color: var(--autopilot-contrast);
+	--autopilot-color: var(--autopilot-contrast);
+	--autopilot-border-color: var(--autopilot-contrast);
 }
 
-:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-color: var(--autopilot-contrast-hover);
-  --autopilot-border-color: var(--autopilot-contrast-hover);
+:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast:is(
+		[aria-current]:not([aria-current="false"]),
+		:hover,
+		:active,
+		:focus
+	) {
+	--autopilot-color: var(--autopilot-contrast-hover);
+	--autopilot-border-color: var(--autopilot-contrast-hover);
 }
 
 :where(button, [type="submit"], [type="reset"], [type="button"], [role="button"])[disabled],
 :where(fieldset[disabled]) :is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]) {
-  opacity: 0.5;
-  pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
-
 .button {
-  --text-weight: 600;
-  --text-width: var(--text-width-s);
-  --button-text: var(--color-text);
-  --button-bg: var(--color-sheet);
-  --button-border: var(--color-text);
-  --button-icon: var(--color-text);
+	--text-weight: 600;
+	--text-width: var(--text-width-s);
+	--button-text: var(--color-text);
+	--button-bg: var(--color-sheet);
+	--button-border: var(--color-text);
+	--button-icon: var(--color-text);
 
-  color: var(--button-text);
-  background-color: var(--button-bg);
-  border: var(--color-text) solid var(--border-weight-s);
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-xs);
-  padding: var(--space-s);
-  font-size: inherit;
-  font-family: inherit;
-  text-decoration: none;
-  transition: color 0.1s step-sta, background-color 0.1s linear;
-  border-radius: var(--border-radius);
-  line-height: 1;
-  text-transform: uppercase;
+	color: var(--button-text);
+	background-color: var(--button-bg);
+	border: var(--color-text) solid var(--border-weight-s);
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-xs);
+	padding: var(--space-s);
+	font-size: inherit;
+	font-family: inherit;
+	text-decoration: none;
+	transition:
+		color 0.1s step-sta,
+		background-color 0.1s linear;
+	border-radius: var(--border-radius);
+	line-height: 1;
+	text-transform: uppercase;
 
-  &:visited {
-    color: var(--button-text);
-  }
+	&:visited {
+		color: var(--button-text);
+	}
 
-  @media (--viewport-small) {
-    line-height: inherit;
-  }
+	@media (--viewport-small) {
+		line-height: inherit;
+	}
 
-  @media (hover: hover) {
-    &:hover {
-      --button-text: var(--color-sheet);
-      --button-bg: var(--color-text);
+	@media (hover: hover) {
+		&:hover {
+			--button-text: var(--color-sheet);
+			--button-bg: var(--color-text);
 
-      cursor: pointer;
-    }
-  }
+			cursor: pointer;
+		}
+	}
 
-  & svg {
-    width: 1.5em;
-    height: auto;
-  }
+	& svg {
+		width: 1.5em;
+		height: auto;
+	}
 
-  &.--fill\@s {
-    @media (--viewport-small) {
-      width: 100%;
-    }
-  }
+	&.--fill\@s {
+		@media (--viewport-small) {
+			width: 100%;
+		}
+	}
 
-  &.--inverted {
-    --button-text: var(--color-sheet);
-    --button-bg: var(--color-text);
-    --button-border: var(--color-text);
-  }
+	&.--inverted {
+		--button-text: var(--color-sheet);
+		--button-bg: var(--color-text);
+		--button-border: var(--color-text);
+	}
 
-  &.--text-only {
-    border-color: transparent;
-    background-color: transparent;
+	&.--text-only {
+		border-color: transparent;
+		background-color: transparent;
 
-    @media (hover: hover) {
-      &:hover {
-        --button-text: var(--color-text);
-        --button-bg: var(--color-sheet);
+		@media (hover: hover) {
+			&:hover {
+				--button-text: var(--color-text);
+				--button-bg: var(--color-sheet);
 
-        border-bottom-color: var(--button-border);
-      }
-    }
-  }
+				border-bottom-color: var(--button-border);
+			}
+		}
+	}
 
-  &[aria-current] {
-    &:not(:hover) {
-      opacity: 0.5;
-    }
-  }
+	&[aria-current] {
+		&:not(:hover) {
+			opacity: 0.5;
+		}
+	}
 }

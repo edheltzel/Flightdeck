@@ -1,4 +1,4 @@
-import { DateTime } from 'luxon'; //bundled with 11ty
+import { DateTime } from "luxon"; //bundled with 11ty
 
 /**
  * Format a date using Luxon's DateTime
@@ -6,7 +6,7 @@ import { DateTime } from 'luxon'; //bundled with 11ty
  * @returns {string} Formatted date string
  */
 export const postDate = (date) => {
-  return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_FULL);
+	return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_FULL);
 };
 
 /**
@@ -15,5 +15,5 @@ export const postDate = (date) => {
  * @returns {string} ISO date string
  */
 export const postDateTime = (date) => {
-  return DateTime.fromJSDate(date).toFormat('yyyy-LL-dd');
+	return DateTime.fromJSDate(date).toFormat("yyyy-LL-dd");
 };

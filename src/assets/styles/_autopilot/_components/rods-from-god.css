@@ -1,5 +1,5 @@
 /* Rods from God */
-@media all and (width >=56.25em) {
+@media all and (width >= 56.25em) {
 	.rfg {
 		position: relative;
 
@@ -11,10 +11,12 @@
 			height: 50vh;
 			width: 2px;
 			top: -50%;
-			background: linear-gradient(to bottom,
-					hsla(0, 0%, 0%, 0) 0,
-					var(--ap-rods-from-god-hsl) 75%,
-					hsla(0, 0%, 0%, 0) 0);
+			background: linear-gradient(
+				to bottom,
+				hsla(0, 0%, 0%, 0) 0,
+				var(--ap-rods-from-god-hsl) 75%,
+				hsla(0, 0%, 0%, 0) 0
+			);
 			animation: rods-from-god var(--ap-rods-from-god-time) cubic-bezier(0.4, 0.26, 0, 0.97) 0s infinite forwards;
 
 			z-index: -1;
@@ -29,25 +31,24 @@
 			left: 40vw;
 		}
 	}
-	main.rfg{
-		&::after{
+	main.rfg {
+		&::after {
 			animation-delay: 1s;
-			left: 30vw
+			left: 30vw;
 		}
 		&::before {
-		animation-delay: 1.75s;
-		left: 40vw
-	}
-
+			animation-delay: 1.75s;
+			left: 40vw;
+		}
 	}
 }
 
 @keyframes rods-from-god {
 	0% {
-		top: -50%
+		top: -50%;
 	}
 
 	100% {
-		top: 100%
+		top: 100%;
 	}
 }

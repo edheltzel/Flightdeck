@@ -3,57 +3,70 @@
  */
 :where(a:not([role="button"])),
 [role="link"] {
-  --autopilot-color: var(--autopilot-primary);
-  --autopilot-background-color: transparent;
-  --autopilot-underline: var(--autopilot-primary-underline);
+	--autopilot-color: var(--autopilot-primary);
+	--autopilot-background-color: transparent;
+	--autopilot-underline: var(--autopilot-primary-underline);
 
-  outline: none;
-  background-color: var(--autopilot-background-color);
-  color: var(--autopilot-color);
-  text-decoration: var(--autopilot-text-decoration);
-  text-decoration-color: var(--autopilot-underline);
-  text-underline-offset: 0.125em;
-  transition: background-color var(--autopilot-transition), color var(--autopilot-transition), box-shadow var(--autopilot-transition), -webkit-text-decoration var(--autopilot-transition);
-  transition: background-color var(--autopilot-transition), color var(--autopilot-transition), text-decoration var(--autopilot-transition), box-shadow var(--autopilot-transition);
-  transition: background-color var(--autopilot-transition), color var(--autopilot-transition), text-decoration var(--autopilot-transition), box-shadow var(--autopilot-transition), -webkit-text-decoration var(--autopilot-transition);
+	outline: none;
+	background-color: var(--autopilot-background-color);
+	color: var(--autopilot-color);
+	text-decoration: var(--autopilot-text-decoration);
+	text-decoration-color: var(--autopilot-underline);
+	text-underline-offset: 0.125em;
+	transition:
+		background-color var(--autopilot-transition),
+		color var(--autopilot-transition),
+		box-shadow var(--autopilot-transition),
+		-webkit-text-decoration var(--autopilot-transition);
+	transition:
+		background-color var(--autopilot-transition),
+		color var(--autopilot-transition),
+		text-decoration var(--autopilot-transition),
+		box-shadow var(--autopilot-transition);
+	transition:
+		background-color var(--autopilot-transition),
+		color var(--autopilot-transition),
+		text-decoration var(--autopilot-transition),
+		box-shadow var(--autopilot-transition),
+		-webkit-text-decoration var(--autopilot-transition);
 }
 
 :where(a:not([role="button"])):is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
 [role="link"]:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-color: var(--autopilot-primary);
-  --autopilot-underline: var(--autopilot-primary-hover-underline);
-  --autopilot-text-decoration: underline;
+	--autopilot-color: var(--autopilot-primary);
+	--autopilot-underline: var(--autopilot-primary-hover-underline);
+	--autopilot-text-decoration: underline;
 }
 
 :where(a:not([role="button"])):focus-visible,
 [role="link"]:focus-visible {
-  box-shadow: 0 0 0 var(--autopilot-outline-width) var(--autopilot-primary-focus);
+	box-shadow: 0 0 0 var(--autopilot-outline-width) var(--autopilot-primary-focus);
 }
 
 :where(a:not([role="button"])).secondary,
 [role="link"].secondary {
-  --autopilot-color: var(--autopilot-secondary);
-  --autopilot-underline: var(--autopilot-secondary-underline);
+	--autopilot-color: var(--autopilot-secondary);
+	--autopilot-underline: var(--autopilot-secondary-underline);
 }
 
 :where(a:not([role="button"])).secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
 [role="link"].secondary:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-color: var(--autopilot-secondary-hover);
-  --autopilot-underline: var(--autopilot-secondary-hover-underline);
+	--autopilot-color: var(--autopilot-secondary-hover);
+	--autopilot-underline: var(--autopilot-secondary-hover-underline);
 }
 
 :where(a:not([role="button"])).contrast,
 [role="link"].contrast {
-  --autopilot-color: var(--autopilot-contrast);
-  --autopilot-underline: var(--autopilot-contrast-underline);
+	--autopilot-color: var(--autopilot-contrast);
+	--autopilot-underline: var(--autopilot-contrast-underline);
 }
 
 :where(a:not([role="button"])).contrast:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus),
 [role="link"].contrast:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
-  --autopilot-color: var(--autopilot-contrast-hover);
-  --autopilot-underline: var(--autopilot-contrast-hover-underline);
+	--autopilot-color: var(--autopilot-contrast-hover);
+	--autopilot-underline: var(--autopilot-contrast-hover-underline);
 }
 
 a[role="button"] {
-  display: inline-block;
+	display: inline-block;
 }

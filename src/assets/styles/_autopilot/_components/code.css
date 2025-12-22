@@ -5,51 +5,51 @@ pre,
 code,
 kbd,
 samp {
-  font-size: 0.875em;
-  font-family: var(--autopilot-font-family);
+	font-size: 0.875em;
+	font-family: var(--autopilot-font-family);
 }
 
 pre code {
-  font-size: inherit;
-  font-family: inherit;
+	font-size: inherit;
+	font-family: inherit;
 }
 
 pre {
-  -ms-overflow-style: scrollbar;
-  overflow: auto;
+	-ms-overflow-style: scrollbar;
+	overflow: auto;
 }
 
 pre,
 code,
 kbd {
-  border-radius: var(--autopilot-border-radius);
-  background: var(--autopilot-code-background-color);
-  color: var(--autopilot-code-color);
-  font-weight: var(--autopilot-font-weight);
-  line-height: initial;
+	border-radius: var(--autopilot-border-radius);
+	background: var(--autopilot-code-background-color);
+	color: var(--autopilot-code-color);
+	font-weight: var(--autopilot-font-weight);
+	line-height: initial;
 }
 
 code,
 kbd {
-  display: inline-block;
-  padding: 0.375rem;
+	display: inline-block;
+	padding: 0.375rem;
 }
 
 pre {
-  display: block;
-  margin-bottom: var(--autopilot-spacing);
-  overflow-x: auto;
+	display: block;
+	margin-bottom: var(--autopilot-spacing);
+	overflow-x: auto;
 }
 
 pre > code {
-  display: block;
-  padding: var(--autopilot-spacing);
-  background: none;
-  line-height: var(--autopilot-line-height);
+	display: block;
+	padding: var(--autopilot-spacing);
+	background: none;
+	line-height: var(--autopilot-line-height);
 }
 
 kbd {
-  background-color: var(--autopilot-code-kbd-background-color);
-  color: var(--autopilot-code-kbd-color);
-  vertical-align: baseline;
+	background-color: var(--autopilot-code-kbd-background-color);
+	color: var(--autopilot-code-kbd-color);
+	vertical-align: baseline;
 }

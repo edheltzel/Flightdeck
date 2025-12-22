@@ -8,11 +8,11 @@
  * @example {% blockquote text="First, solve the problem. Then, write the code.", source="John Johnson", classes="text-lg italic" %}
  */
 export default (params = {}) => {
-  const { text = '', source = '', classes = '' } = params;
-  return `<!-- Blockquote-->
-  <blockquote ${classes ? `class="${classes}"` : ''}>
+	const { text = "", source = "", classes = "" } = params;
+	return `<!-- Blockquote-->
+  <blockquote ${classes ? `class="${classes}"` : ""}>
     ${text}
-    ${source ? `<footer><cite>- ${source}</cite></footer>` : ''}
+    ${source ? `<footer><cite>- ${source}</cite></footer>` : ""}
   </blockquote>
 `;
-}
+};

@@ -2,137 +2,152 @@
  * Dropdown (details.dropdown)
  */
 details.dropdown {
-  position: relative;
-  border-bottom: none;
+	position: relative;
+	border-bottom: none;
 }
 
 details.dropdown summary::after,
 details.dropdown > button::after,
 details.dropdown > a::after {
-  display: block;
-  width: 1rem;
-  height: calc(1rem * var(--autopilot-line-height, 1.5));
-  margin-inline-start: 0.25rem;
-  float: right;
-  transform: rotate(0deg) translateX(0.2rem);
-  background-image: var(--autopilot-icon-chevron);
-  background-position: right center;
-  background-size: 1rem auto;
-  background-repeat: no-repeat;
-  content: "";
+	display: block;
+	width: 1rem;
+	height: calc(1rem * var(--autopilot-line-height, 1.5));
+	margin-inline-start: 0.25rem;
+	float: right;
+	transform: rotate(0deg) translateX(0.2rem);
+	background-image: var(--autopilot-icon-chevron);
+	background-position: right center;
+	background-size: 1rem auto;
+	background-repeat: no-repeat;
+	content: "";
 }
 
 nav details.dropdown {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 details.dropdown summary:not([role]) {
-  height: calc(1rem * var(--autopilot-line-height) + var(--autopilot-form-element-spacing-vertical) * 2 + var(--autopilot-border-width) * 2);
-  padding: var(--autopilot-form-element-spacing-vertical) var(--autopilot-form-element-spacing-horizontal);
-  border: var(--autopilot-border-width) solid var(--autopilot-form-element-border-color);
-  border-radius: var(--autopilot-border-radius);
-  background-color: var(--autopilot-form-element-background-color);
-  color: var(--autopilot-form-element-placeholder-color);
-  line-height: inherit;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color var(--autopilot-transition), border-color var(--autopilot-transition), color var(--autopilot-transition), box-shadow var(--autopilot-transition);
+	height: calc(
+		1rem *
+		var(--autopilot-line-height) +
+		var(--autopilot-form-element-spacing-vertical) *
+		2 +
+		var(--autopilot-border-width) *
+		2
+	);
+	padding: var(--autopilot-form-element-spacing-vertical) var(--autopilot-form-element-spacing-horizontal);
+	border: var(--autopilot-border-width) solid var(--autopilot-form-element-border-color);
+	border-radius: var(--autopilot-border-radius);
+	background-color: var(--autopilot-form-element-background-color);
+	color: var(--autopilot-form-element-placeholder-color);
+	line-height: inherit;
+	cursor: pointer;
+	user-select: none;
+	transition:
+		background-color var(--autopilot-transition),
+		border-color var(--autopilot-transition),
+		color var(--autopilot-transition),
+		box-shadow var(--autopilot-transition);
 }
 
 details.dropdown summary:not([role]):active,
 details.dropdown summary:not([role]):focus {
-  border-color: var(--autopilot-form-element-active-border-color);
-  background-color: var(--autopilot-form-element-active-background-color);
+	border-color: var(--autopilot-form-element-active-border-color);
+	background-color: var(--autopilot-form-element-active-background-color);
 }
 
 details.dropdown summary:not([role]):focus {
-  box-shadow: 0 0 0 var(--autopilot-outline-width) var(--autopilot-form-element-focus-color);
+	box-shadow: 0 0 0 var(--autopilot-outline-width) var(--autopilot-form-element-focus-color);
 }
 
 details.dropdown summary:not([role]):focus-visible {
-  outline: none;
+	outline: none;
 }
 
 details.dropdown summary:not([role])[aria-invalid="false"] {
-  --autopilot-form-element-border-color: var(--autopilot-form-element-valid-border-color);
-  --autopilot-form-element-active-border-color: var(--autopilot-form-element-valid-focus-color);
-  --autopilot-form-element-focus-color: var(--autopilot-form-element-valid-focus-color);
+	--autopilot-form-element-border-color: var(--autopilot-form-element-valid-border-color);
+	--autopilot-form-element-active-border-color: var(--autopilot-form-element-valid-focus-color);
+	--autopilot-form-element-focus-color: var(--autopilot-form-element-valid-focus-color);
 }
 
 details.dropdown summary:not([role])[aria-invalid="true"] {
-  --autopilot-form-element-border-color: var(--autopilot-form-element-invalid-border-color);
-  --autopilot-form-element-active-border-color: var(--autopilot-form-element-invalid-focus-color);
-  --autopilot-form-element-focus-color: var(--autopilot-form-element-invalid-focus-color);
+	--autopilot-form-element-border-color: var(--autopilot-form-element-invalid-border-color);
+	--autopilot-form-element-active-border-color: var(--autopilot-form-element-invalid-focus-color);
+	--autopilot-form-element-focus-color: var(--autopilot-form-element-invalid-focus-color);
 }
 
 nav details.dropdown {
-  display: inline;
-  margin: calc(var(--autopilot-nav-element-spacing-vertical) * -1) 0;
+	display: inline;
+	margin: calc(var(--autopilot-nav-element-spacing-vertical) * -1) 0;
 }
 
 nav details.dropdown summary::after {
-  transform: rotate(0deg) translateX(0);
+	transform: rotate(0deg) translateX(0);
 }
 
 nav details.dropdown summary:not([role]) {
-  height: calc(1rem * var(--autopilot-line-height) + var(--autopilot-nav-link-spacing-vertical) * 2);
-  padding: calc(var(--autopilot-nav-link-spacing-vertical) - var(--autopilot-border-width) * 2) var(--autopilot-nav-link-spacing-horizontal);
+	height: calc(1rem * var(--autopilot-line-height) + var(--autopilot-nav-link-spacing-vertical) * 2);
+	padding: calc(var(--autopilot-nav-link-spacing-vertical) - var(--autopilot-border-width) * 2)
+		var(--autopilot-nav-link-spacing-horizontal);
 }
 
 nav details.dropdown summary:not([role]):focus-visible {
-  box-shadow: 0 0 0 var(--autopilot-outline-width) var(--autopilot-primary-focus);
+	box-shadow: 0 0 0 var(--autopilot-outline-width) var(--autopilot-primary-focus);
 }
 
 details.dropdown summary + ul {
-  display: flex;
-  z-index: 99;
-  position: absolute;
-  left: 0;
-  flex-direction: column;
-  width: 100%;
-  min-width: fit-content;
-  margin: 0;
-  margin-top: var(--autopilot-outline-width);
-  padding: 0;
-  border: var(--autopilot-border-width) solid var(--autopilot-dropdown-border-color);
-  border-radius: var(--autopilot-border-radius);
-  background-color: var(--autopilot-dropdown-background-color);
-  box-shadow: var(--autopilot-dropdown-box-shadow);
-  color: var(--autopilot-dropdown-color);
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity var(--autopilot-transition), transform 0s ease-in-out 1s;
+	display: flex;
+	z-index: 99;
+	position: absolute;
+	left: 0;
+	flex-direction: column;
+	width: 100%;
+	min-width: fit-content;
+	margin: 0;
+	margin-top: var(--autopilot-outline-width);
+	padding: 0;
+	border: var(--autopilot-border-width) solid var(--autopilot-dropdown-border-color);
+	border-radius: var(--autopilot-border-radius);
+	background-color: var(--autopilot-dropdown-background-color);
+	box-shadow: var(--autopilot-dropdown-box-shadow);
+	color: var(--autopilot-dropdown-color);
+	white-space: nowrap;
+	opacity: 0;
+	transition:
+		opacity var(--autopilot-transition),
+		transform 0s ease-in-out 1s;
 }
 
 details.dropdown summary + ul[dir="rtl"] {
-  right: 0;
-  left: auto;
+	right: 0;
+	left: auto;
 }
 
 details.dropdown summary + ul li {
-  width: 100%;
-  margin-bottom: 0;
-  padding: calc(var(--autopilot-form-element-spacing-vertical) * 0.5) var(--autopilot-form-element-spacing-horizontal);
-  list-style: none;
+	width: 100%;
+	margin-bottom: 0;
+	padding: calc(var(--autopilot-form-element-spacing-vertical) * 0.5) var(--autopilot-form-element-spacing-horizontal);
+	list-style: none;
 }
 
 details.dropdown summary + ul li:first-of-type {
-  margin-top: calc(var(--autopilot-form-element-spacing-vertical) * 0.5);
+	margin-top: calc(var(--autopilot-form-element-spacing-vertical) * 0.5);
 }
 
 details.dropdown summary + ul li:last-of-type {
-  margin-bottom: calc(var(--autopilot-form-element-spacing-vertical) * 0.5);
+	margin-bottom: calc(var(--autopilot-form-element-spacing-vertical) * 0.5);
 }
 
 details.dropdown summary + ul li a {
-  display: block;
-  margin: calc(var(--autopilot-form-element-spacing-vertical) * -0.5) calc(var(--autopilot-form-element-spacing-horizontal) * -1);
-  padding: calc(var(--autopilot-form-element-spacing-vertical) * 0.5) var(--autopilot-form-element-spacing-horizontal);
-  overflow: hidden;
-  border-radius: 0;
-  color: var(--autopilot-dropdown-color);
-  text-decoration: none;
-  text-overflow: ellipsis;
+	display: block;
+	margin: calc(var(--autopilot-form-element-spacing-vertical) * -0.5)
+		calc(var(--autopilot-form-element-spacing-horizontal) * -1);
+	padding: calc(var(--autopilot-form-element-spacing-vertical) * 0.5) var(--autopilot-form-element-spacing-horizontal);
+	overflow: hidden;
+	border-radius: 0;
+	color: var(--autopilot-dropdown-color);
+	text-decoration: none;
+	text-overflow: ellipsis;
 }
 
 details.dropdown summary + ul li a:hover,
@@ -140,39 +155,41 @@ details.dropdown summary + ul li a:focus,
 details.dropdown summary + ul li a:active,
 details.dropdown summary + ul li a:focus-visible,
 details.dropdown summary + ul li a[aria-current]:not([aria-current="false"]) {
-  background-color: var(--autopilot-dropdown-hover-background-color);
+	background-color: var(--autopilot-dropdown-hover-background-color);
 }
 
 details.dropdown summary + ul li label {
-  width: 100%;
+	width: 100%;
 }
 
 details.dropdown summary + ul li:has(label):hover {
-  background-color: var(--autopilot-dropdown-hover-background-color);
+	background-color: var(--autopilot-dropdown-hover-background-color);
 }
 
 details.dropdown[open] summary {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 details.dropdown[open] summary + ul {
-  transform: scaleY(1);
-  opacity: 1;
-  transition: opacity var(--autopilot-transition), transform 0s ease-in-out 0s;
+	transform: scaleY(1);
+	opacity: 1;
+	transition:
+		opacity var(--autopilot-transition),
+		transform 0s ease-in-out 0s;
 }
 
 details.dropdown[open] summary::before {
-  display: block;
-  z-index: 1;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-  background: none;
-  content: "";
-  cursor: default;
+	display: block;
+	z-index: 1;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	inset: 0;
+	background: none;
+	content: "";
+	cursor: default;
 }
 
 label > details.dropdown {
-  margin-top: calc(var(--autopilot-spacing) * 0.25);
+	margin-top: calc(var(--autopilot-spacing) * 0.25);
 }

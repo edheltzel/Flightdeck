@@ -9,43 +9,43 @@
  * @returns {import("@11ty/eleventy").EleventyConfig} - Returns Eleventy's configuration options
  */
 
-import addWorkflow from "./src/_flightdeck/workflow.js";
 import addFilters from "./src/_flightdeck/filters.js";
-import addTransforms from "./src/_flightdeck/transforms.js";
-import addShortcodes from "./src/_flightdeck/shortcodes.js";
 import addPlugins from "./src/_flightdeck/plugins.js";
+import addShortcodes from "./src/_flightdeck/shortcodes.js";
+import addTransforms from "./src/_flightdeck/transforms.js";
+import addWorkflow from "./src/_flightdeck/workflow.js";
 
-export default function(config) {
-    /** @type {{useImageDirTransform: boolean}} */
-    const options = {
-        useImageDirTransform: false
-    };
+export default function (config) {
+	/** @type {{useImageDirTransform: boolean}} */
+	const options = {
+		useImageDirTransform: false,
+	};
 
-    // Configure development workflow (server, watch, passthrough)
-    addWorkflow(config, options);
+	// Configure development workflow (server, watch, passthrough)
+	addWorkflow(config, options);
 
-    // Add transforms (esbuild, lightningcss, image optimization)
-    addTransforms(config, options);
+	// Add transforms (esbuild, lightningcss, image optimization)
+	addTransforms(config, options);
 
-    // Add eleventy plugins
-    addPlugins(config);
+	// Add eleventy plugins
+	addPlugins(config);
 
-    // Add shortcodes for templates
-    addShortcodes(config);
+	// Add shortcodes for templates
+	addShortcodes(config);
 
-    // Add universal filters
-    addFilters(config);
+	// Add universal filters
+	addFilters(config);
 
-    return {
-        dir: {
-            input: "src",
-            output: "dist",
-            data: "_includes/data",
-            includes: "_includes",
-            layouts: "_includes/layouts"
-        },
-        htmlTemplateEngine: "njk",
-        markdownTemplateEngine: "njk",
-        templateFormats: ["md", "njk", "html"],
-    };
+	return {
+		dir: {
+			input: "src",
+			output: "dist",
+			data: "_includes/data",
+			includes: "_includes",
+			layouts: "_includes/layouts",
+		},
+		htmlTemplateEngine: "njk",
+		markdownTemplateEngine: "njk",
+		templateFormats: ["md", "njk", "html"],
+	};
 }

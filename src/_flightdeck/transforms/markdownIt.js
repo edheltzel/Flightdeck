@@ -29,16 +29,14 @@ import mdItBracketedSpans from "markdown-it-bracketed-spans";
  * @returns {import('markdown-it')} Configured markdown-it instance
  */
 export default () => {
-  const options = {
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true
-  };
+	const options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+		typographer: true,
+	};
 
-  const md = mdIt(options)
-    .use(mdItAttrs)
-    .use(mdItBracketedSpans);
+	const md = mdIt(options).use(mdItAttrs).use(mdItBracketedSpans);
 
-  return md;
+	return md;
 };

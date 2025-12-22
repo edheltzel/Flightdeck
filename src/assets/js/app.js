@@ -12,7 +12,7 @@ import Alpine from "alpinejs";
 import toggleTheme from "./components/toggle-theme";
 
 /** @type {import('alpinejs').Alpine} */
-// @ts-ignore
+// @ts-expect-error
 window.Alpine = Alpine;
 Alpine.data("theme", toggleTheme);
 Alpine.start();

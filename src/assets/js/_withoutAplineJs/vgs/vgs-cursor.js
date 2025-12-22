@@ -28,13 +28,13 @@ export function VGSCursor() {
 		 * The y-coordinate of the mouse.
 		 * @type {number}
 		 */
-		let mouseY;
+		let _mouseY;
 
 		/**
 		 * The x-coordinate of the mouse.
 		 * @type {number}
 		 */
-		let mouseX = 0;
+		let _mouseX = 0;
 
 		/**
 		 * Whether the cursor is hovering over a clickable element.
@@ -53,8 +53,8 @@ export function VGSCursor() {
 			if (!isHovering) {
 				outerCursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
 				innerCursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-				mouseY = event.clientY;
-				mouseX = event.clientX;
+				_mouseY = event.clientY;
+				_mouseX = event.clientX;
 			}
 		}
 

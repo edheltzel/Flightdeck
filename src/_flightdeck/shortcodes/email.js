@@ -16,6 +16,6 @@
  * @see src/assets/styles/_autopilot/_utilities/text.css
  */
 export default (params = {}) => {
-  const { address, honeypot = 'honeypot' } = params;
-  return `<span class="email">${address}<b>${honeypot}.com</b></span>`;
+	const { address, honeypot = "honeypot" } = params;
+	return `<span class="email">${address}<b>${honeypot}.com</b></span>`;
 };

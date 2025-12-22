@@ -2,25 +2,25 @@
 custom fonts
 ---------------------------------------------------------------------------- */
 @font-face {
-	font-family: 'Trispace';
+	font-family: "Trispace";
 	/* Give your font a name */
-	src: url('/assets/fonts/Trispace.woff2') format('woff2');
+	src: url("/assets/fonts/Trispace.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'MuseoModernoItalic';
+	font-family: "MuseoModernoItalic";
 	/* Give your font a name */
-	src: url('/assets/fonts/MuseoModerno-Italic-VariableFont_wght.woff2') format('woff2');
+	src: url("/assets/fonts/MuseoModerno-Italic-VariableFont_wght.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'MuseoModerno';
+	font-family: "MuseoModerno";
 	/* Give your font a name */
-	src: url('/assets/fonts/MuseoModerno-VariableFont_wght.woff2') format('woff2');
+	src: url("/assets/fonts/MuseoModerno-VariableFont_wght.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }

@@ -2,12 +2,12 @@
  * Figure
  */
 figure {
-  display: block;
-  margin: 0;
-  padding: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
 figure figcaption {
-  padding: calc(var(--autopilot-spacing) * 0.5) 0;
-  color: var(--autopilot-muted-color);
+	padding: calc(var(--autopilot-spacing) * 0.5) 0;
+	color: var(--autopilot-muted-color);
 }

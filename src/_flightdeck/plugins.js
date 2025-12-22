@@ -8,12 +8,12 @@
  * @param {import("@11ty/eleventy").UserConfig} config - The Eleventy config object to which the plugins will be added.
  */
 
-import embedEverything from "eleventy-plugin-embed-everything";
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import navigation from "@11ty/eleventy-navigation";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import embedEverything from "eleventy-plugin-embed-everything";
 
 export default (config) => {
-  config.addPlugin(embedEverything);
-  config.addPlugin(syntaxHighlight);
-  config.addPlugin(navigation);
+	config.addPlugin(embedEverything);
+	config.addPlugin(syntaxHighlight);
+	config.addPlugin(navigation);
 };

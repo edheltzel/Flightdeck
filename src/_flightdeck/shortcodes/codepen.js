@@ -9,31 +9,26 @@
  * @example {% codepen penUrl="https://codepen.io/jacobberglund/pen/bwrGvx", height=900, tabs="css,result", theme="178" %}
  */
 export default (params) => {
-  const {
-    penUrl,
-    height = 300,
-    tabs = "result",
-    theme = ""
-  } = params;
+	const { penUrl, height = 300, tabs = "result", theme = "" } = params;
 
-  if (!penUrl) {
-    throw new Error("penUrl is required for the Codepen embed");
-  }
+	if (!penUrl) {
+		throw new Error("penUrl is required for the Codepen embed");
+	}
 
-  // Extract pen ID from URL
-  const penId = penUrl.split("/").pop();
+	// Extract pen ID from URL
+	const penId = penUrl.split("/").pop();
 
-  // Extract username from URL
-  const username = penUrl.split("/").slice(-3)[0];
+	// Extract username from URL
+	const username = penUrl.split("/").slice(-3)[0];
 
-  return `
+	return `
     <div class="codepen-wrapper">
       <iframe
         height="${height}"
         style="width: 100%;"
         scrolling="no"
         title="Codepen Embed"
-        src="https://codepen.io/${username}/embed/${penId}?default-tab=${tabs}${theme ? `&theme-id=${theme}` : ''}"
+        src="https://codepen.io/${username}/embed/${penId}?default-tab=${tabs}${theme ? `&theme-id=${theme}` : ""}"
         frameborder="no"
         loading="lazy"
         allowtransparency="true"

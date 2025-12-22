@@ -7,5 +7,5 @@
  * useful for creating css classes based on layouts
  */
 export const stripFileExtension = (file) => {
-  return file.replace(/\.[^/.]+$/, "");
+	return file.replace(/\.[^/.]+$/, "");
 };

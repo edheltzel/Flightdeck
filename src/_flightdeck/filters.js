@@ -9,16 +9,16 @@
  */
 
 import baseUrl from "./filters/baseUrl.js";
-import { postLimit } from "./filters/postLimit.js";
-import { stripFileExtension } from "./filters/stripFileExtension.js";
 import * as date from "./filters/dates.js";
 import excerpt from "./filters/excerpt.js";
+import { postLimit } from "./filters/postLimit.js";
+import { stripFileExtension } from "./filters/stripFileExtension.js";
 
 export default (config) => {
-  config.addFilter("excerpt", excerpt);
-  config.addFilter("postLimit", postLimit);
-  config.addFilter("removeExt", stripFileExtension);
-  config.addFilter("baseUrl", baseUrl);
-  config.addFilter("postDate", date.postDate);
-  config.addFilter("postDateTime", date.postDateTime);
+	config.addFilter("excerpt", excerpt);
+	config.addFilter("postLimit", postLimit);
+	config.addFilter("removeExt", stripFileExtension);
+	config.addFilter("baseUrl", baseUrl);
+	config.addFilter("postDate", date.postDate);
+	config.addFilter("postDateTime", date.postDateTime);
 };

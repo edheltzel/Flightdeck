@@ -1,19 +1,25 @@
 /**
  * Input type datetime
  */
-input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]):is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
-  --autopilot-icon-position: 0.75rem;
-  --autopilot-icon-width: 1rem;
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]):is(
+		[type="date"],
+		[type="datetime-local"],
+		[type="month"],
+		[type="time"],
+		[type="week"]
+	) {
+	--autopilot-icon-position: 0.75rem;
+	--autopilot-icon-width: 1rem;
 
-  padding-right: calc(var(--autopilot-icon-width) + var(--autopilot-icon-position));
-  background-image: var(--autopilot-icon-date);
-  background-position: center right var(--autopilot-icon-position);
-  background-size: var(--autopilot-icon-width) auto;
-  background-repeat: no-repeat;
+	padding-right: calc(var(--autopilot-icon-width) + var(--autopilot-icon-position));
+	background-image: var(--autopilot-icon-date);
+	background-position: center right var(--autopilot-icon-position);
+	background-size: var(--autopilot-icon-width) auto;
+	background-repeat: no-repeat;
 }
 
 input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type="time"] {
-  background-image: var(--autopilot-icon-time);
+	background-image: var(--autopilot-icon-time);
 }
 
 [type="date"]::-webkit-calendar-picker-indicator,
@@ -21,23 +27,23 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
 [type="month"]::-webkit-calendar-picker-indicator,
 [type="time"]::-webkit-calendar-picker-indicator,
 [type="week"]::-webkit-calendar-picker-indicator {
-  width: var(--autopilot-icon-width);
-  margin-right: calc(var(--autopilot-icon-width) * -1);
-  margin-left: var(--autopilot-icon-position);
-  opacity: 0;
+	width: var(--autopilot-icon-width);
+	margin-right: calc(var(--autopilot-icon-width) * -1);
+	margin-left: var(--autopilot-icon-position);
+	opacity: 0;
 }
 
 @-moz-document url-prefix() {
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="time"],
-  [type="week"] {
-    padding-right: var(--autopilot-form-element-spacing-horizontal) !important;
-    background-image: none !important;
-  }
+	[type="date"],
+	[type="datetime-local"],
+	[type="month"],
+	[type="time"],
+	[type="week"] {
+		padding-right: var(--autopilot-form-element-spacing-horizontal) !important;
+		background-image: none !important;
+	}
 }
 
 [dir="rtl"] :is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {
-  text-align: right;
+	text-align: right;
 }

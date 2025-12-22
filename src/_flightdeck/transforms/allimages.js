@@ -8,8 +8,8 @@
  * @requires fast-glob
  */
 
-import Image from "@11ty/eleventy-img";
 import path from "node:path";
+import Image from "@11ty/eleventy-img";
 import glob from "fast-glob";
 
 /**
@@ -17,38 +17,35 @@ import glob from "fast-glob";
  * @returns {Promise<void>}
  */
 const optimizeImages = async () => {
-  const baseDirectory = "./src/assets/images";
-  const outputDirectory = "./dist/assets/images";
-  const imageFormats = ["jpg", "jpeg", "png", "gif", "webp", "avif"];
+	const baseDirectory = "./src/assets/images";
+	const outputDirectory = "./dist/assets/images";
+	const imageFormats = ["jpg", "jpeg", "png", "gif", "webp", "avif"];
 
-  try {
-    // Find all image files
-    const imageFiles = await glob(`${baseDirectory}/**/*.{${imageFormats.join(',')}}`);
+	try {
+		// Find all image files
+		const imageFiles = await glob(`${baseDirectory}/**/*.{${imageFormats.join(",")}}`);
 
-    // Process each image
-    for (const imagePath of imageFiles) {
-      const outputPath = path.join(
-        outputDirectory,
-        path.relative(baseDirectory, imagePath)
-      );
+		// Process each image
+		for (const imagePath of imageFiles) {
+			const outputPath = path.join(outputDirectory, path.relative(baseDirectory, imagePath));
 
-      await Image(imagePath, {
-        formats: ["avif", "webp", "jpeg"],
-        outputDir: path.dirname(outputPath),
-        filenameFormat: (id, src, width, format) => {
-          const ext = path.extname(src);
-          const name = path.basename(src, ext);
-          return `${name}-${width}w.${format}`;
-        },
-        widths: [400, 800, 1200],
-        sharpOptions: {
-          animated: true
-        }
-      });
-    }
-  } catch (error) {
-    console.error("Image optimization error:", error);
-  }
+			await Image(imagePath, {
+				formats: ["avif", "webp", "jpeg"],
+				outputDir: path.dirname(outputPath),
+				filenameFormat: (_id, src, width, format) => {
+					const ext = path.extname(src);
+					const name = path.basename(src, ext);
+					return `${name}-${width}w.${format}`;
+				},
+				widths: [400, 800, 1200],
+				sharpOptions: {
+					animated: true,
+				},
+			});
+		}
+	} catch (error) {
+		console.error("Image optimization error:", error);
+	}
 };
 
 /**
@@ -60,6 +57,6 @@ const optimizeImages = async () => {
  * @param {EleventyConfig} config - The Eleventy configuration object.
  */
 export default (config) => {
-  // Run image optimization during build
-  config.on("eleventy.after", optimizeImages);
+	// Run image optimization during build
+	config.on("eleventy.after", optimizeImages);
 };

@@ -9,8 +9,8 @@
  * @example {% button type="submit", text="Click Me", classes="btn btn-primary" %}
  */
 export const button = (params = {}) => {
-  const { type = 'button', text = 'Button', classes = 'btn' } = params;
-  return `<button class="${classes}" type="${type}">${text}</button>`;
+	const { type = "button", text = "Button", classes = "btn" } = params;
+	return `<button class="${classes}" type="${type}">${text}</button>`;
 };
 
 /**
@@ -25,6 +25,6 @@ export const button = (params = {}) => {
  * @example {% link url="https://example.com", text="Visit Site", classes="btn btn-primary", target="_blank" %}
  */
 export const buttonLink = (params = {}) => {
-  const { url = '/', text = 'Button', classes = 'btn', target = '_self' } = params;
-  return `<a href="${url}" class="${classes}" target="${target}">${text}</a>`;
+	const { url = "/", text = "Button", classes = "btn", target = "_self" } = params;
+	return `<a href="${url}" class="${classes}" target="${target}">${text}</a>`;
 };

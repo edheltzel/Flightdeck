@@ -1,80 +1,80 @@
 {
-  "animals": [
-    {
-      "name": "cat",
-      "legs": 4
-    },
-    {
-      "name": "dog",
-      "legs": 4
-    },
-    {
-      "name": "squid",
-      "legs": 8
-    },
-    {
-      "name": "wolf",
-      "legs": 4
-    },
-    {
-      "name": "fish",
-      "legs": 0
-    },
-    {
-      "name": "cat",
-      "legs": 4
-    },
-    {
-      "name": "dog",
-      "legs": 4
-    },
-    {
-      "name": "squid",
-      "legs": 8
-    },
-    {
-      "name": "wolf",
-      "legs": 4
-    },
-    {
-      "name": "fish",
-      "legs": 0
-    },
-    {
-      "name": "cat",
-      "legs": 4
-    },
-    {
-      "name": "dog",
-      "legs": 4
-    },
-    {
-      "name": "cow",
-      "legs": 4
-    },
-    {
-      "name": "human",
-      "legs": 2
-    },
-    {
-      "name": "fish",
-      "legs": 0
-    },
-    {
-      "name": "cat",
-      "legs": 4
-    },
-    {
-      "name": "mouse",
-      "legs": 4
-    },
-    {
-      "name": "fish",
-      "legs": 0
-    },
-    {
-      "name": "cat",
-      "legs": 4
-    }
-  ]
+	"animals": [
+		{
+			"name": "cat",
+			"legs": 4
+		},
+		{
+			"name": "dog",
+			"legs": 4
+		},
+		{
+			"name": "squid",
+			"legs": 8
+		},
+		{
+			"name": "wolf",
+			"legs": 4
+		},
+		{
+			"name": "fish",
+			"legs": 0
+		},
+		{
+			"name": "cat",
+			"legs": 4
+		},
+		{
+			"name": "dog",
+			"legs": 4
+		},
+		{
+			"name": "squid",
+			"legs": 8
+		},
+		{
+			"name": "wolf",
+			"legs": 4
+		},
+		{
+			"name": "fish",
+			"legs": 0
+		},
+		{
+			"name": "cat",
+			"legs": 4
+		},
+		{
+			"name": "dog",
+			"legs": 4
+		},
+		{
+			"name": "cow",
+			"legs": 4
+		},
+		{
+			"name": "human",
+			"legs": 2
+		},
+		{
+			"name": "fish",
+			"legs": 0
+		},
+		{
+			"name": "cat",
+			"legs": 4
+		},
+		{
+			"name": "mouse",
+			"legs": 4
+		},
+		{
+			"name": "fish",
+			"legs": 0
+		},
+		{
+			"name": "cat",
+			"legs": 4
+		}
+	]
 }

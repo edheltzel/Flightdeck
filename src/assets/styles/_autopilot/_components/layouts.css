@@ -3,48 +3,48 @@
 /** Containers */
 .container,
 .container-fluid {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--autopilot-spacing);
-  padding-left: var(--autopilot-spacing);
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: var(--autopilot-spacing);
+	padding-left: var(--autopilot-spacing);
 }
 
 @media (width >= 576px) {
-  .container {
-    max-width: 510px;
-    padding-right: 0;
-    padding-left: 0;
-  }
+	.container {
+		max-width: 510px;
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 @media (width >= 768px) {
-  .container {
-    max-width: 700px;
-  }
+	.container {
+		max-width: 700px;
+	}
 }
 
 @media (width >= 1024px) {
-  .container {
-    max-width: 950px;
-  }
+	.container {
+		max-width: 950px;
+	}
 }
 
 @media (width >= 1280px) {
-  .container {
-    max-width: 1200px;
-  }
+	.container {
+		max-width: 1200px;
+	}
 }
 
 @media (width >= 1536px) {
-  .container {
-    max-width: 1450px;
-  }
+	.container {
+		max-width: 1450px;
+	}
 }
 
 /**
  * Overflow auto
  */
 .overflow-auto {
-  overflow: auto;
+	overflow: auto;
 }

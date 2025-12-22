@@ -2,67 +2,66 @@
 Animate: trigger CSS animations on any element at any time, with optional delay or on scroll into view
 ---------------------------------------------------------------------------- */
 
-
 .animate {
-  &.--fade-in {
-    animation: fade-in 0.5s ease-out forwards;
-  }
+	&.--fade-in {
+		animation: fade-in 0.5s ease-out forwards;
+	}
 
-  @nest .js &[data-aos] {
-    opacity: 0;
-  }
+	@nest .js &[data-aos] {
+		opacity: 0;
+	}
 
-  @nest .js &[data-aos-children] > * {
-    opacity: 0;
-  }
+	@nest .js &[data-aos-children] > * {
+		opacity: 0;
+	}
 
-  &.--delay-s {
-    animation-delay: 0.15s;
-  }
+	&.--delay-s {
+		animation-delay: 0.15s;
+	}
 
-  &.--delay-m {
-    animation-delay: 0.3s;
-  }
+	&.--delay-m {
+		animation-delay: 0.3s;
+	}
 
-  &.--delay-l {
-    animation-delay: 0.45s;
-  }
+	&.--delay-l {
+		animation-delay: 0.45s;
+	}
 
-  &.--delay-xl {
-    animation-delay: 0.6s;
-  }
+	&.--delay-xl {
+		animation-delay: 0.6s;
+	}
 
-  &.--delay-xxl {
-    animation-delay: 0.75s;
-  }
+	&.--delay-xxl {
+		animation-delay: 0.75s;
+	}
 
-  &.--duration-s {
-    animation-duration: 0.25s;
-  }
+	&.--duration-s {
+		animation-duration: 0.25s;
+	}
 
-  &.--duration-m {
-    animation-duration: 0.5s;
-  }
+	&.--duration-m {
+		animation-duration: 0.5s;
+	}
 
-  &.--duration-l {
-    animation-duration: 0.75s;
-  }
+	&.--duration-l {
+		animation-duration: 0.75s;
+	}
 
-  &.--duration-xl {
-    animation-duration: 1s;
-  }
+	&.--duration-xl {
+		animation-duration: 1s;
+	}
 
-  &.--duration-xxl {
-    animation-duration: 1.5s;
-  }
+	&.--duration-xxl {
+		animation-duration: 1.5s;
+	}
 }
 
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }

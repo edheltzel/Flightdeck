@@ -3,10 +3,10 @@
 /**
  * Minify HTML
  * @module minifyHtml
- * @requires html-minifier
+ * @requires html-minifier-terser
  */
 
-import htmlmin from "html-minifier";
+import htmlmin from "html-minifier-terser";
 
 /**
  * @typedef {import('@11ty/eleventy').UserConfig} EleventyConfig
@@ -17,19 +17,19 @@ import htmlmin from "html-minifier";
  * @param {EleventyConfig} config - The Eleventy configuration object.
  */
 export default (config) => {
-  config.addTransform("htmlMin", async (content, outputPath) => {
-    if (outputPath?.endsWith(".html")) {
-      const minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-        minifyCSS: true,
-        minifyJS: true,
-      });
+	config.addTransform("htmlMin", async (content, outputPath) => {
+		if (outputPath?.endsWith(".html")) {
+			const minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true,
+			});
 
-      return minified;
-    }
+			return minified;
+		}
 
-    return content;
-  });
+		return content;
+	});
 };

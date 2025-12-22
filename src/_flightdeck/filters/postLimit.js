@@ -7,5 +7,5 @@
  * @usage {{ for item in collections.all | postLimit(3) }}
  */
 export const postLimit = (arr, limit) => {
-  return arr.slice(0, limit);
+	return arr.slice(0, limit);
 };
